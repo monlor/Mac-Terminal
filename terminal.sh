@@ -23,9 +23,10 @@ install_brew(){
 
 install_zsh() {
 	echo "安装Oh-my-zsh中..."
-	if [ "$SHELL" != "/bin/zsh" ] && [ ! -d ~/.oh-my-zsh ]; then
+	if [ "$SHELL" != "/bin/zsh" ] || [ ! -d ~/.oh-my-zsh ]; then
 		# 先安装xcode插件，git需要
 		xcode-select --install 
+		rm -rf ~/.oh-my-zsh
 		curl -L https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh | sh
 		[ $? -ne 0 ] && echo "请检查网络问题！" && exit
 	else
