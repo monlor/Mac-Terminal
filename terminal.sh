@@ -97,6 +97,7 @@ config_ls() {
 
 terminal_solarized() {
 	echo "设置终端solarized主题..."
+	rm -rf ~/Mac-Terminal
 	git clone https://github.com/monlor/Mac-Terminal ~/Mac-Terminal
 	[ $? -ne 0 ] && echo "请检查网络问题！" && exit
 	cp -rf ~/Mac-Terminal/Meslo\ LG\ L\ DZ\ Regular\ for\ Powerline.ttf /Library/Fonts
