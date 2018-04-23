@@ -49,7 +49,7 @@ config_zshrc() {
 	export PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
 	export MANPATH="/usr/local/opt/coreutils/libexec/gnuman:$MANPATH"
 	# 修改Homebrew Bottles源
-	echo 'export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.ustc.edu.cn/homebrew-bottles' >> ~/.zshrc
+	export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.ustc.edu.cn/homebrew-bottles
 	# zsh高亮插件
 	source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 	# 添加coreutils的ls主题solarized
