@@ -1,7 +1,7 @@
 #!/bin/bash
 ProjectName="$(echo $0 | sed -e "s|/[^/]*$||" -e "s|/.*/||")"
 GitUrl="https://github.com/monlor"
-echo "推送项目[$ProjectName]到[$GitUrl/$ProjectName.git]"
+echo "Push [$ProjectName] To [$GitUrl/$ProjectName.git]."
 path=~/SyncFile/Project/"$ProjectName"
 cd $path
 [ $? -ne 0 ] && exit
