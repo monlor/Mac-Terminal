@@ -1,5 +1,5 @@
 #!/bin/bash
-ProjectName="Mac-Terminal"
+ProjectName="$(echo $0 | sed -e "s|/[^/]*$||" -e "s|/.*/||")"
 path=~/SyncFile/Project/$ProjectName
 cd $path
 [ $? -ne 0 ] && exit
