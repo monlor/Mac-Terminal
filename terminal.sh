@@ -69,7 +69,7 @@ config_vim() {
 		rm -rf ~/solarized
 		git clone https://github.com/altercation/solarized.git ~/solarized
 		[ $? -ne 0 ] && echo "请检查网络问题！" && exit
-		sudo cp -rf ~/solarized/vim-colors-solarized/* /usr/share/vim/vim80/
+		sudo cp -rf ~/solarized/vim-colors-solarized/* /usr/share/vim/vim*/
 		echo -e "syntax enable\nset background=dark\ncolorscheme solarized" > ~/.vimrc
 		rm -rf ~/solarized
 	else
