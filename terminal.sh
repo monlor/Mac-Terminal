@@ -70,7 +70,7 @@ config_vim() {
 		git clone https://github.com/altercation/solarized.git ~/solarized
 		[ $? -ne 0 ] && echo "请检查网络问题！" && exit
 		sudo cp -rf ~/solarized/vim-colors-solarized/* /usr/share/vim/vim*/
-		echo -e "syntax enable\nset background=dark\ncolorscheme solarized" > ~/.vimrc
+		echo "syntax enable\nset background=dark\ncolorscheme solarized" > ~/.vimrc
 		rm -rf ~/solarized
 	else
 		echo "检测到vim主题已设置！"
@@ -105,6 +105,7 @@ terminal_solarized() {
 	echo "即将打开新的solarized主题终端，请设置其为默认主题"
 	sleep 3
 	/Applications/Utilities/Terminal.app/Contents/MacOS/Terminal ~/Mac-Terminal/Solarized\ Dark\ xterm-256color.terminal &
+	sleep 2
 	rm -rf ~/Mac-Terminal
 
 }
