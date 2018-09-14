@@ -21,11 +21,13 @@ install_brew(){
 	echo "安装完成！"
 }
 
+check_xcode() {
+	git --help &> /dev/null || xcode-select --install 
+}
+
 install_zsh() {
 	echo "安装Oh-my-zsh中..."
 	if [ "$SHELL" != "/bin/zsh" ] || [ ! -d ~/.oh-my-zsh ]; then
-		# 先安装xcode插件，git需要
-		xcode-select --install 
 		rm -rf ~/.oh-my-zsh
 		curl -L https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh | sh
 		[ $? -ne 0 ] && echo "请检查网络问题！" && exit
@@ -111,6 +113,7 @@ terminal_solarized() {
 }
 
 main() {
+	check_xcode
 	install_zsh
 	install_brew
 	config_ls
