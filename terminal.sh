@@ -46,7 +46,7 @@ config_zshrc() {
 	cat > ~/.zshrc <<-\EOF
 	export ZSH=~/.oh-my-zsh
 	ZSH_THEME="agnoster"
-	plugins=(git)
+	plugins=(git last-working-dir)
 	source $ZSH/oh-my-zsh.sh
 	# 设置coreutils工具
 	export PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
