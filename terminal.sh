@@ -61,7 +61,12 @@ config_zshrc() {
 	# 解决screenfetch显示bug，替换readlink为coreutils
 	alias readlink=greadlink
 	# http proxy
-	# export http_proxy='http://localhost:1087'
+	# http_proxy_ip="127.0.0.1"
+	# http_proxy_port="1087"
+	# if (echo -e "\n"|telnet ${http_proxy_ip} ${http_proxy_port} | grep "Connected") &> /dev/null; then
+	# 	export http_proxy=http://${http_proxy_ip}:${http_proxy_port}
+	#	export https_proxy=http://${http_proxy_ip}:${http_proxy_port}
+	# fi
 	EOF
 	sleep 1
 	echo "修改完成！"
