@@ -66,6 +66,9 @@ config_zshrc() {
 	# if (echo -e "\n"|telnet ${http_proxy_ip} ${http_proxy_port} | grep "Connected") &> /dev/null; then
 	# 	export http_proxy=http://${http_proxy_ip}:${http_proxy_port}
 	#	export https_proxy=https://${http_proxy_ip}:${http_proxy_port}
+	# else 
+	#	export http_proxy=""
+	#	export https_proxy=""
 	# fi
 	EOF
 	sleep 1
