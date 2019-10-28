@@ -77,15 +77,15 @@ config_zshrc() {
 
 config_vim() {
 	echo "设置vim的solarized主题..."
-	if [ ! -f /usr/share/vim/vim80/colors/solarized.vim ]; then
-		rm -rf ~/solarized
+	if [ ! -f ~/.vim/colors/solarized.vim ]; then
+		rm -rf ~/vim-colors-solarized
 		git clone https://github.com/altercation/vim-colors-solarized.git ~/vim-colors-solarized
 		[ $? -ne 0 ] && echo "请检查网络问题！" && exit
 		#sudo cp -rf ~/vim-colors-solarized/* /usr/share/vim/vim*/
 		[ ! -d ~/.vim ] && mkdir -p ~/.vim
 		cp -rf ~/vim-colors-solarized/* ~/.vim
 		echo "syntax enable\nset background=dark\ncolorscheme solarized" > ~/.vimrc
-		rm -rf ~/solarized
+		rm -rf ~/vim-colors-solarized
 	else
 		echo "检测到vim主题已设置！"
 		return
