@@ -118,7 +118,7 @@ terminal_solarized() {
 	cp -rf ~/Mac-Terminal/Meslo\ LG\ L\ DZ\ Regular\ for\ Powerline.ttf /Library/Fonts
 	echo "即将打开新的solarized主题终端，请设置其为默认主题"
 	sleep 3
-	/Applications/Utilities/Terminal.app/Contents/MacOS/Terminal ~/Mac-Terminal/Solarized\ Dark\ xterm-256color.terminal &
+	/System/Applications/Utilities/Terminal.app/Contents/MacOS/Terminal ~/Mac-Terminal/Solarized\ Dark\ xterm-256color.terminal &
 	sleep 2
 	rm -rf ~/Mac-Terminal
 
