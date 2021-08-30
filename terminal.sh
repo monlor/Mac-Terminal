@@ -43,6 +43,7 @@ config_zshrc() {
 	[ ! -d /usr/local/opt/coreutils/ ] && brew install coreutils
 	[ ! -d /usr/local/share/zsh-syntax-highlighting ] && brew install zsh-syntax-highlighting
 	echo "修改zshrc环境变量文件..."
+	[ -f ~/.zshrc ] && mv ~/.zshrc ~/.zshrc.bak
 	cat > ~/.zshrc <<-\EOF
 	export ZSH=~/.oh-my-zsh
 	ZSH_THEME="agnoster"
